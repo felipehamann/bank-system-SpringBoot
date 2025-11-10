@@ -222,7 +222,7 @@ To persist data permanently, you can easily switch to **MySQL**, **PostgreSQL**,
 
 **Felipe Hamann**  
 Backend Developer – Java / Spring Boot / Node.js  
-📧 [felipe@example.com](mailto:felipe@example.com)  
+📧 [felipe.hamann@sansano.usm.cl](mailto:felipe.hamann@sansano.usm.cl)  
 🌐 [github.com/felipehamann](https://github.com/felipehamann)
 
 ---
