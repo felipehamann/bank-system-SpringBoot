@@ -1,0 +1,101 @@
+### 1) Crear cliente Felipe
+POST http://localhost:8080/api/customers
+Content-Type: application/json
+Accept: application/json
+
+{
+  "fullName": "Felipe Hamann",
+  "email": "felipe@example.com"
+}
+
+### 2) Crear cliente Segundo (para probar transferencias entre distintos dueños, opcional)
+POST http://localhost:8080/api/customers
+Content-Type: application/json
+Accept: application/json
+
+{
+  "fullName": "Cliente Dos",
+  "email": "cliente2@example.com"
+}
+
+### 3) Listar clientes (ver IDs)
+GET http://localhost:8080/api/customers
+Accept: application/json
+
+
+### 4) Crear cuenta para cliente 1 (usa el ID real que veas arriba)
+POST http://localhost:8080/api/accounts
+Content-Type: application/json
+Accept: application/json
+
+{
+  "customerId": 1,
+  "currency": "CLP"
+}
+
+### 5) Crear segunda cuenta para cliente 1 (para probar transfer interna)
+POST http://localhost:8080/api/accounts
+Content-Type: application/json
+Accept: application/json
+
+{
+  "customerId": 1,
+  "currency": "CLP"
+}
+
+### 6) Crear cuenta para cliente 2 (opcional)
+POST http://localhost:8080/api/accounts
+Content-Type: application/json
+Accept: application/json
+
+{
+  "customerId": 2,
+  "currency": "CLP"
+}
+
+### 7) Ver cuentas del cliente 1
+GET http://localhost:8080/api/accounts/by-customer/1
+Accept: application/json
+
+
+### 8) Depositar en una cuenta específica
+# 1. Ejecuta el paso 7.
+# 2. Copia el "accountNumber" real.
+# 3. Reemplaza ACC_AQUI por ese valor y ejecuta este request.
+
+POST http://localhost:8080/api/accounts/deposit
+Content-Type: application/json
+Accept: application/json
+
+{
+  "accountNumber": "ACC_AQUI",
+  "amount": 50000
+}
+
+### 9) Verificar saldo después del depósito
+# Usa el mismo customerId de la cuenta donde depositaste
+GET http://localhost:8080/api/accounts/by-customer/1
+Accept: application/json
+
+
+### 10) Transferencia entre dos cuentas
+# 1. Asegúrate de tener dos cuentas con saldo en la cuenta origen.
+# 2. Reemplaza FROM_ACC y TO_ACC con los accountNumber reales de las respuestas anteriores.
+
+POST http://localhost:8080/api/accounts/transfer
+Content-Type: application/json
+Accept: application/json
+
+{
+  "fromAccount": "FROM_ACC",
+  "toAccount": "TO_ACC",
+  "amount": 10000
+}
+
+### 11) Verificar cuentas después de la transferencia
+GET http://localhost:8080/api/accounts/by-customer/1
+Accept: application/json
+
+### 12) Ver transacciones directamente en la BD (recordatorio)
+# Esto lo haces en H2 Console:
+# SELECT * FROM TRANSACTIONS;
