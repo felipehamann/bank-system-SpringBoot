@@ -226,5 +226,4 @@ Backend Developer – Java / Spring Boot / Node.js
 🌐 [github.com/felipehamann](https://github.com/felipehamann)
 
 ---
-
-> Educational project simulating the operations of a banking system, applying best practices in REST API design, security, and documentation.
+ 
