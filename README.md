@@ -225,4 +225,4 @@ Backend Developer – Java / Spring Boot / Node.js
 
 ---
 
-> Proyecto educativo desarrollado para simular la operativa de un sistema bancario con buenas prácticas de arquitectura, seguridad y documentación en APIs REST.
+
