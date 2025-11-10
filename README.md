@@ -1,5 +1,7 @@
 # 🏦 Bank API
 
+[en English Version](./README.en.md)
+
 API RESTful desarrollada con **Spring Boot 3** y **Java 21** que simula la gestión operativa de un banco.  
 Permite administrar clientes, cuentas bancarias y transacciones, incluyendo depósitos, retiros, transferencias, bloqueos y cierres de cuenta.  
 La documentación interactiva se genera automáticamente con **Swagger UI**.
