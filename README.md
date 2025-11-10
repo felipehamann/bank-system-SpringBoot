@@ -220,7 +220,7 @@ Si se desea persistencia real, se puede reemplazar fácilmente por **MySQL**, **
 
 **Felipe Hamann**  
 Backend Developer – Java / Spring Boot / Node.js  
-📧 [felipe@sansano.usm.cl](mailto:felipe@sansano.usm.cl)  
+📧 [felipe.hamann@sansano.usm.cl](mailto:felipe.hamann@sansano.usm.cl)  
 🌐 [github.com/felipehamann](https://github.com/felipehamann)
 
 ---
